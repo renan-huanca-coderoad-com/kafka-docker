@@ -1,9 +1,11 @@
-FROM java:8-jre-alpine
+#FROM java:8-jre-alpine
+FROM anapsix/alpine-java
+
 
 MAINTAINER ViZix "service@mojix.com"
 
 RUN apk add --update unzip wget curl docker jq coreutils
-RUN mkdir /opt
+#RUN mkdir /opt
 
 ENV KAFKA_VERSION="0.10.0.0" SCALA_VERSION="2.11"
 ADD download-kafka.sh /tmp/download-kafka.sh
